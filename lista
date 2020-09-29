@@ -1,0 +1,13 @@
+colocar valor num reg
+ler input da func
+multiplicar -> imul
+modular -> idiv
+++
+for -> jmps condicionais
+return valor
+
+eax retorna
+i -> eax
+n -> ebx
+i*i -> ecx
+n%i -> edx
