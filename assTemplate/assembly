@@ -1,6 +1,6 @@
 global hello
 
-section .text:
+section .text
 
 hello:
   mov eax, 0x4
@@ -12,8 +12,9 @@ hello:
   mov eax, 0x1
   mov ebx, 0
   int 0x80
+  ret
 
-section .data:
+section .data
   message: db "God, it actually worked...", 0xa
   message_length equ $-message
 
