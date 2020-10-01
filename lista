@@ -7,7 +7,7 @@ for -> jmps condicionais
 return valor
 
 eax retorna
-i -> eax
-n -> ebx
+n -> eax
+i -> ebx
 i*i -> ecx
 n%i -> edx
