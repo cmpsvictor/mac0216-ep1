@@ -1,0 +1,5 @@
+locate unistd_32.h
+ver params, jogar nos regs
+
+write -> ssize_t write(int fd, cons void *buf, size_t count) -> fd é stdout(ou seja, 1), cons void *buf é message,
+count é tamanho do que sera lido -> printar msgs requer isso no stdout
