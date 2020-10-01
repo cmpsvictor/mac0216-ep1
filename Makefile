@@ -6,6 +6,12 @@ sieve_asm.o:
 	gcc -m32 is_prime.o sieve_asm.c -o sieve_asm
 	rm is_prime.o
 
+print.o:
+	nasm -f elf32 is_prime.s -o is_prime.o
+	nasm -f elf32 print.s -o print.o
+	gcc -m32 is_prime.o print.o sieve_nostdlib.c -o print
+	rm is_prime.o print.o
+
 sieve_nostdlib.o:
 	nasm -f elf32 is_prime.s -o is_prime.o
 	nasm -f elf32 print.s -o print.o
