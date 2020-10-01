@@ -15,8 +15,14 @@ isprime:
   mov eax, DWORD PTR [ebp+8]   ;ebx guarda n
   mov ecx, 2                   ;ecx = 2
 
-  cmp eax, 00
+  cmp eax, 00       ;pegar numeros menores que 0
   jl error
+
+  cmp eax, 1        ;pegar 1-> not primo
+  je notPrime
+
+  cmp eax, 2        ;pegar 2-> primo
+  je prime
 
   jmp loopInit
   
