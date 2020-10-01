@@ -1,9 +1,11 @@
 #include <stdio.h>
 
-void hello();
+int isprime();
 
 int main() {
-	printf("Haha Yes\n");
-	hello();
+	printf("Haha Yes: ");
+	int a;
+	scanf("%d",&a);
+	printf(">%d\n",isprime(a));
 	return 0;
 }

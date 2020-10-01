@@ -1,5 +1,5 @@
-global hello
-
+global yolo
+%use masm
 section .text
 
 hello:
@@ -12,6 +12,13 @@ hello:
   mov eax, 0x1
   mov ebx, 0
   int 0x80
+  ret
+
+yolo:
+  push ebp
+  mov ebp, esp
+  mov eax, DWORD PTR [ebp+8]
+  pop ebp
   ret
 
 section .data
