@@ -3,9 +3,10 @@
 int isprime();
 
 int main() {
-	printf("Haha Yes: ");
 	int a;
+	printf("Haha Yes: ");
 	scanf("%d",&a);
-	printf(">%d\n",isprime(a));
+
+	isprime(a);
 	return 0;
 }

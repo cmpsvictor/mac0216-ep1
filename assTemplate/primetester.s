@@ -31,11 +31,19 @@ loopInit:
   jmp prime      ;se chegamos até aqui, é primo
 
 notPrime:
-  mov eax, 0
+  mov eax, 0x4
+  mov ebx, 1
+  mov ecx, nehprimo
+  mov edx, nehprimo_t
+  int 0x80
   jmp mainEnd
 
 prime:
-  mov eax, 1
+  mov eax, 0x4
+  mov ebx, 1
+  mov ecx, ehprimo
+  mov edx, ehprimo_t
+  int 0x80
   jmp mainEnd
 
 mainEnd:  ;restauramos os valores dos registradores e terminamos a função
@@ -48,3 +56,7 @@ mainEnd:  ;restauramos os valores dos registradores e terminamos a função
   ret
 
 section .data
+  ehprimo: db "Ah yes, ele é primo.", 0xa
+  ehprimo_t equ $-ehprimo
+  nehprimo: db "Nop, no es primo.", 0xa
+  nehprimo_t equ $-ehprimo
