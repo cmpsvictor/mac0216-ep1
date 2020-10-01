@@ -10,5 +10,5 @@ sieve_nostdlib.o:
 	nasm -f elf32 is_prime.s -o is_prime.o
 	nasm -f elf32 print.s -o print.o
 	nasm -f elf32 _start.s -o _start.o
-	gcc -m32 is_prime.o print.o _start.o sieve_nostdlib.c -o sieve_nostdlib
+	gcc -nostdlib -m32 is_prime.o print.o _start.o sieve_nostdlib.c -o sieve_nostdlib
 	rm is_prime.o print.o _start.o
