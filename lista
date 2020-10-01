@@ -1,13 +1,3 @@
-colocar valor num reg
-ler input da func
-multiplicar -> imul
-modular -> idiv
-++
-for -> jmps condicionais
-return valor
-
-eax retorna
-n -> eax
-i -> ebx
-i*i -> ecx
-n%i -> edx
+	linux-gate.so.1 (0xf7f8f000)
+	libc.so.6 => /usr/lib32/libc.so.6 (0xf7d6c000)
+	/lib/ld-linux.so.2 => /usr/lib/ld-linux.so.2 (0xf7f91000)
