@@ -38,6 +38,6 @@ Um programa em que as funcoes feitas em C nao contem nenhuma dependencia dinamic
 
 ## Participantes
 
-* Joao Renner Nusp: XXXXXXXX
-* Maximilian Cabrajac Nusp: 11795418
-* Victor Campos Nusp: XXXXXXXX
+* Joao Renner NUSP: 11276221
+* Maximilian Cabrajac NUSP: 11795418
+* Victor Campos NUSP: 11796913
