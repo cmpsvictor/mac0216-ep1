@@ -1,3 +1,12 @@
+all:
+	make sieve.o
+	make sieve_asm.o
+	make print.o
+
+clean:
+	rm sieve sieve_asm print
+	make all
+
 sieve.o:
 	gcc -o sieve sieve.c
 
