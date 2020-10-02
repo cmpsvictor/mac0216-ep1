@@ -8,14 +8,22 @@ section .text
 start:
 	push ebp
 	mov ebp, esp
+
+	; Preparar ponteiro de argv
 	mov eax , ebp
 	add eax, 8
+	; colocar argv no stack
 	push eax
-	push DWORD[ebp + 4] ; colocar argc no stack
+	; colocar argc no stack
+	push DWORD[ebp + 4]
+
 	call main
+
 	jmp exit
 
 exit:
+	; Preperar argmentos do exit
 	mov ebx, eax
 	mov eax, 0x1
+	; vator de syscall
 	int 0x80

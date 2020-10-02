@@ -24,7 +24,7 @@ int strLen(char *str){
 	return i;
 }
 
-/* parse strToInt */
+/* Parse strToInt */
 int strToInt(char *str){
 	int i = 0;
 	int log = strLen(str) - 1;
@@ -47,8 +47,7 @@ int main(int argc, char *argv[]){
 	int num;
 	char *temp;
 
-	/* checagem se o comando  recebeu o numero
-	 * correto de argumentos */
+	/* Validar quantidade de argumentos */
 	if( argc != 2 ){
 		temp = "Formato: ";
 		printStr(temp);

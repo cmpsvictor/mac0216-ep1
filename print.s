@@ -1,5 +1,3 @@
-; testando o print/scanf
-
 global print_asm
 
 %use MASM
