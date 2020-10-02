@@ -19,17 +19,16 @@ int strLen(char *str){
 	while(str[i] != '\0'){
 		i++;
 	}
-	i--;
 	return i;
 }
 
 int strToInt(char *str){
 	int i = 0;
-	int len = strLen(str);
+	int log = strLen(str) - 1;
 	int num = 0;
 	char c = str[i];
 	while(c != '\0'){
-		num += (c - '0') * power(10, len - i);
+		num += (c - '0') * power(10, log - i);
 		i++;
 		c = str[i];
 	}
@@ -38,14 +37,23 @@ int strToInt(char *str){
 
 int main(int argc, char *argv[]) {
 	int num;
+	char *temp;
+
+	if( argc != 2 ){
+		temp = "Formato: <comando> <numero>\n";
+		print_asm(strLen(temp), temp);
+		return 1;
+	}
 
 	num = strToInt(argv[1]);
 
 	if (is_prime(num)) {
-		print_asm(2, "1\n");
+		temp = "1\n";
 	} else {
-		print_asm(2, "0\n");
+		temp = "0\n";
 	}
+
+	print_asm(strLen(temp), temp);
 
 	return 0;
 }

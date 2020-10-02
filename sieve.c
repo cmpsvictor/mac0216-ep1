@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int is_prime(int n){
 	int i;
@@ -10,21 +11,18 @@ int is_prime(int n){
 	return 1;
 }
 
-int main() {
-	int prime = 1;
+
+int main(int argc, char *argv[]) {
 	int num;
 
-	printf("Enter a cool number: ");
-	scanf("%d", &num);
-	printf("\n");
-
-	prime = is_prime(num);
-
-	if (prime == 0) {
-		printf("Your cool number is not prime!\n");
+	if( argc != 2 ){
+		printf("Formato: <comando> <numero>\n");
+		return 1;
 	}
-	else {
-		printf("Your cool number is prime!\n");
-	}
+
+	num = atoi(argv[1]);
+
+	printf("%d\n", is_prime(num));
+
 	return 0;
 }

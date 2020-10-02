@@ -1,19 +1,19 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int is_prime(int n);
 
-int main() {
+int main(int argc, char *argv[]) {
 	int num;
 
-	printf("Enter a cool number: ");
-	scanf("%d", &num);
+	if( argc != 2 ){
+		printf("Formato: <comando> <numero>\n");
+		return 1;
+	}
 
-	if (is_prime(num)) {
-		printf("Your cool number is prime!\n");
-	}
-	else {
-		printf("Your cool number is not prime!\n");
-	}
+	num = atoi(argv[1]);
+
+	printf("%d\n", is_prime(num));
 
 	return 0;
 }
