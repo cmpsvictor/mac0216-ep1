@@ -7,7 +7,9 @@ int main(int argc, char *argv[]) {
 	int num;
 
 	if( argc != 2 ){
-		printf("Formato: <comando> <numero>\n");
+		printf("Formato: ");
+		printf("%s", argv[0]);
+		printf(" <numero>\n");
 		return 1;
 	}
 
