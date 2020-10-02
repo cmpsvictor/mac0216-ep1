@@ -2,8 +2,6 @@ global start
 
 extern main
 
-%use MASM
-
 section .text
 start:
 	push ebp
@@ -15,7 +13,7 @@ start:
 	; colocar argv no stack
 	push eax
 	; colocar argc no stack
-	push DWORD[ebp + 4]
+	push dword[ebp + 4]
 
 	call main
 

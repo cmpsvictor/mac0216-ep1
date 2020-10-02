@@ -1,7 +1,5 @@
 global is_prime
 
-%use MASM
-
 section .text
 
 is_prime:
@@ -25,7 +23,7 @@ FOR:
 	; imul -> eax = eax * argumento -> i*i
 	imul eax
 	; i*i <= n
-	mov ebx, DWORD PTR[ebp + 8]
+	mov ebx, dword[ebp + 8]
 	cmp eax, ebx
 	; jump >
 	jg PRIMO

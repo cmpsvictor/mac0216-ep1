@@ -1,7 +1,5 @@
 global print_asm
 
-%use MASM
-
 section .text
 
 print_asm:
@@ -19,9 +17,9 @@ print_asm:
 	; file descriptor usado -> stdout
 	mov ebx, 0x1
 	; string recebido pela funcao
-	mov ecx, DWORD PTR[ebp + 12]
+	mov ecx, dword[ebp + 12]
 	; length da string recebida
-	mov edx, DWORD PTR[ebp + 8]
+	mov edx, dword[ebp + 8]
 
 	; vetor de interrupções pra chamar a rotina write
 	int 0x80
