@@ -12,50 +12,53 @@ is_prime:
 
 	; Guardando os regs
 	push ebx
+	push ecx
 	push edx
 
-
 	; i = 2
-	mov eax, 0x2
+	mov ecx, 0x2
+	jmp FOR
 
 FOR:
-	; i*i <= n
-	push eax
+	; colocar i no eax para imul
+	mov eax, ecx
 	; imul -> eax = eax * argumento -> i*i
 	imul eax
-	mov ebx, DWORD PTR[ebp + 4]
+	; i*i <= n
+	mov ebx, DWORD PTR[ebp + 8]
 	cmp eax, ebx
-	ja PRIMO
+	; jump >
+	jg PRIMO
 
-	; colocar n em eax
+	; colocar n em eax para idiv
 	mov eax, ebx
-	cdq
 
-	; recuperar i para ebx
-	pop ebx
-
-	div ebx
+	; n%i para edx
+	idiv ecx
 
 	; comaprar resto com 0
 	cmp edx, 0
 	je NPRIMO
 
-	inc ebx
-	mov eax, ebx
+	; i++
+	inc ecx
 	jmp FOR
 
 
 
 
 NPRIMO:
+	; prep return value
 	mov eax, 0
 	jmp FIM
 PRIMO:
+	; prep return value
 	mov eax, 1
 	jmp FIM
 FIM:
 	; Restaurar os regs
 	pop edx
+	pop ecx
 	pop ebx
 
 	; Saida da funcao
