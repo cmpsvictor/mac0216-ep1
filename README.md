@@ -28,7 +28,7 @@ Consiste de um programa escrito completamente em C para checar se o numero dado 
 
 `make sieve_asm.o`
 
-Um programa onde o I/O e feito por meio da linguagem C, porem a vericação da primalidade é feita em assembly x86 de 32-bits.
+Um programa onde o I/O é feito por meio da linguagem C, porem a verificação da primalidade é feita em assembly x86 de 32-bits.
 
 ### Sieve_nostdlib
 
