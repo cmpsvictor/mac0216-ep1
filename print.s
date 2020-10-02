@@ -7,31 +7,34 @@ global print_asm
 section .text
 
 print_asm:
-    push ebp
-    mov ebp, esp
-   
-   ; guardar registradores
-    push eax
-    push ebx
-    push ecx
-    push edx
+	push ebp
+	mov ebp, esp
 
-    ; void print_asm(int length, char *string)
+   ; guardar regs
+	push eax
+	push ebx
+	push ecx
+	push edx
 
-    mov eax, 0x4 ; usar syscall de write
-    mov ebx, 0x1; file descriptor usado vai ser stdout
-    mov ecx, DWORD PTR[ebp + 12]
-    mov edx, DWORD PTR[ebp + 8] ; length de parametro da funcao
+	; usar syscall de write
+	mov eax, 0x4
+	; file descriptor usado -> stdout
+	mov ebx, 0x1
+	; string recebido pela funcao
+	mov ecx, DWORD PTR[ebp + 12]
+	; length da string recebida
+	mov edx, DWORD PTR[ebp + 8]
 
-    int 0x80 ; vetor de interrupções pra chamar a rotina write
+	; vetor de interrupções pra chamar a rotina write
+	int 0x80
 
-    ; restaurar
-    pop edx
-    pop ecx
-    pop ebx
-    pop eax
+	; restaurar regs
+	pop edx
+	pop ecx
+	pop ebx
+	pop eax
 
-    pop ebp
-    ret
-    
-    
+	pop ebp
+	ret
+
+
