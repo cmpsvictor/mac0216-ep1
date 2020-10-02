@@ -22,8 +22,8 @@ start:
 	jmp exit
 
 exit:
-	; Preperar argmentos do exit
+	; Preparar argumentos do exit
 	mov ebx, eax
 	mov eax, 0x1
-	; vator de syscall
+	; vetor de interrupção pra executar exit
 	int 0x80
