@@ -15,6 +15,10 @@ is_prime:
 	push ecx
 	push edx
 
+	; tratando n < 2
+	cmp eax, 0x2
+	jl NPRIMO
+
 	; i = 2
 	mov ecx, 0x2
 	jmp FOR
