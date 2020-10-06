@@ -14,8 +14,8 @@ is_prime:
 	push edx
 
 	; tratando n < 2
-    cmp eax, 0x2
-    jl NPRIMO
+	cmp eax, 0x2
+	jl NPRIMO
 
 	; i = 2
 	mov ecx, 0x2
@@ -66,6 +66,3 @@ FIM:
 	; Saida da funcao
 	pop ebp
 	ret
-
-section .data
-
