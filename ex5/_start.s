@@ -2,7 +2,7 @@ global start
 
 extern main
 
-%use MASM
+%use MASM ; arquitetura
 
 section .text
 start:
