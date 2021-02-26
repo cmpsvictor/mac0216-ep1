@@ -42,6 +42,8 @@ no executável resultante.
 
 ## Participantes
 
-* João Renner Rudge NUSP: 11276221
-* Maximilian Cabrajac Görtz NUSP: 11795418
-* Victor Aristóteles Rocha Campos NUSP: 11796913
+Projeto Exercício-Programa 1 da disciplina _Técnicas de Programação 1_.
+
+* João Renner Rudge 
+* Maximilian Cabrajac Görtz 
+* Victor Aristóteles Rocha Campos 
